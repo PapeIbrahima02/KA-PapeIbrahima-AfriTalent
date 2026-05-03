@@ -3,16 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfriTalent — Accueil</title>
+    <title>AfriTalent — Freelance</title>
     <!-- Bootstrap 5 via CDN : feuille de style -->
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet">
+    <!-- Boostrap icones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
     <!-- Votre feuille de style personnelle -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Le contenu de la page sera ajoute ici -->
+    <header>
+        <!-- Barre de Navigation -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                <img src="" alt="AfriTalent" class="d-inline-block align-text-top">
+                AfriTalent
+                </a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navMenu"
+                    aria-controls="navMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="freelance.html">Freelances</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tarif.html">Tarifs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">A propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <a class="btn ms-3" href="contact.html">Rejoindre AfriTalent</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+
+        <!-- Catalogue de freelances -->
+        <section>
+            <!-- Barre de filtre -->
+            <select name="" id="" class="btn">
+                <option value="">Tous</option>
+                <option value="">Développement Web</option>
+                <option value="">Design UI/UX</option>
+                <option value="">Marketing Digital</option>
+                <option value="">Data & IA</option>
+                <option value="">DevOps & Cloud</option>
+                <option value="">Rédaction Tech</option>
+            </select>
+
+            <!-- Grille de profils -->
+            <div class="container py-5 mb-5">
+                <h2 class="text-center my-5">Nos profils de freelance</h2>
+                <div class="row g-5">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="images/Bamba diouf.jpg" alt="Bamba Diouf">
+                            <div class="card-body">
+                                <h3>Ahmadou Bamba DIOUF</h3>
+                                <h5>Développeur Web</h5>
+                                <p>Spécialisé en création de sites modernes et performants.</p>
+                                <strong>50 000 FCFA / heure</strong>
+                                <p>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </p>
+                                <a href="" class="btn">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="images/Farah_Hakim.jpg" alt="Farah Hakim">
+                            <div class="card-body">
+                                <h3>Farah Hakim</h3>
+                                <h5>Designer UI/UX</h5>
+                                <p>Création d’interfaces intuitives et expériences utilisateur fluides.</p>
+                                <strong>40 000 FCFA / heure</strong>
+                                <p>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star"></i>
+                                </p>
+                                <a href="" class="btn">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="images/Ousmane_Pouye.jpg" alt="Ousmane Pouye Diagne">
+                            <div class="card-body">
+                                <h3>Ousmane Pouye Diagne</h3>
+                                <h5>Data Scientist</h5>
+                                <p>Analyse de données et création de modèles prédictifs avancés.</p>
+                                <strong>60 000 FCFA / heure</strong>
+                                <p>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </p>
+                                <a href="" class="btn">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="images/Christine_Capou.jpg" alt="Christine Capou">
+                            <div class="card-body">
+                                <h3>Christine Capou</h3>
+                                <h5>Rédactrice Tech</h5>
+                                <p>Rédaction de contenus techniques clairs et optimisés SEO.</p>
+                                <strong>25 000 FCFA / heure</strong>
+                                <p>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star"></i>
+                                </p>
+                                <a href="" class="btn">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="images/Mouhamed_ElHazali.jpg" alt="Mouhamed El Ghazi">
+                            <div class="card-body">
+                                <h3>Mouhamed El Ghazi</h3>
+                                <h5>Spécialiste Marketing Digital</h5>
+                                <p>Stratégies digitales pour booster la visibilité des entreprises.</p>
+                                <strong>45 000 FCFA / heure</strong>
+                                <p>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </p>
+                                <a href="" class="btn">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="images/Rose_Williams.jpg" alt="Rose Williams">
+                            <div class="card-body">
+                                <h3>Rose Williams</h3>
+                                <h5>Ingénieure DevOps</h5>
+                                <p>Automatisation des déploiements et gestion des infrastructures cloud.</p>
+                                <strong>70 000 FCFA / heure</strong>
+                                <p>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </p>
+                                <a href="" class="btn">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="images/Pape_ibrahima.jpg" alt="Pape Ibrahima KA">
+                            <div class="card-body">
+                                <h3>Pape Ibrahima KA</h3>
+                                <h5>Développeur Full Stack</h5>
+                                <p>Développement complet d’applications web performantes.</p>
+                                <strong>55 000 FCFA / heure</strong>
+                                <p>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </p>
+                                <a href="" class="btn">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="images/Ftim_Mahmoud.jpg" alt="Fatim Mahmoud">
+                            <div class="card-body">
+                                <h3>Fatim Mahmoud</h3>
+                                <h5>Designer Graphique</h5>
+                                <p>Création de visuels attractifs et identités visuelles modernes.</p>
+                                <strong>35 000 FCFA / heure</strong>
+                                <p>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </p>
+                                <a href="" class="btn">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="images/Patrice_Mbia.jpg" alt="Patrice M'bia">
+                            <div class="card-body">
+                                <h3>Patrice M'bia</h3>
+                                <h5>Ingénieur Cloud</h5>
+                                <p>Mise en place et gestion de solutions cloud sécurisées.</p>
+                                <strong>65 000 FCFA / heure</strong>
+                                <p>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </p>
+                                <a href="" class="btn">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer / pied de page -->
+    <footer class="pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col md-3">
+                    <h3>AfriTalent</h3>
+                    <p>Plateforme de mise en relation entre freelances et entreprises en Afrique.</p>
+                    <img src="" alt="AfriTalent"> 
+                </div>
+                <div class="col md-3">
+                    <h3>Liens utiles</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none">Accueil</a></li>
+                        <li><a href="freelance.html" class="text-decoration-none">Freelance</a></li>
+                        <li><a href="tarif.html" class=" text-decoration-none">Tarif</a></li>
+                        <li><a href="about.html" class=" text-decoration-none">A propos</a></li>
+                        <li><a href="contact.html" class=" text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col md-3">
+                    <h3>Ressources</h3>
+                    <ul class="list-unstyled">
+                        <li><a href=""></a>Blog</li>
+                        <li><a href=""></a>FAQ</li>
+                        <li><a href=""></a>Support</li>
+                    </ul>
+                </div>
+                <div class="col md-3">
+                    <h3>Contact</h3>
+                    <p>Email : contact@afritalent.com</p>
+                    <p>Tel : +221 77 210 22 99</p>
+                </div>
+            </div>
+
+            <div>
+                <a href="http:www.facebook.com"><i class="bi bi-facebook me-3 fs-4"></i></a>
+                <a href="http:www.instagram.com"><i class="bi bi-instagram me-3 fs-4"></i></a>
+                <a href="http:www.linkedin.com"><i class="bi bi-linkedin fs-4"></i></a>
+            </div> 
+
+            <div class="text-center py-4">
+                <p>&copy; 2026 AfriTalent. Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
     <!-- Bootstrap 5 via CDN : script JavaScript -->
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

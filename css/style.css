@@ -1,0 +1,214 @@
+/* Variables */
+:root {   
+    /* Couleurs */
+    --bs-green: #198754;   /*Couleur principale*/
+  --couleur-secondaire : #EAF8F3;   /*Couleur secondaire*/
+  --couleur-fond : #FFFFFF;    /*Couleur de fond*/
+  --couleur-paragraphe : #555555;    /*Couleur paragraphe et icones*/
+  --couleur-titre : #000000;    /*Couleur titre*/
+
+  /* police */
+  --police-titre : 'poppins', sans-serif;
+  --police-paragraphe : 'roboto', sans-serif;
+}
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Couleuur de fond */
+body{
+    background-color: var(--couleur-fond);
+}
+/* Police */
+h1, h2, h3, h5, h6{
+    color: var(--couleur-titre);
+    font-family: var(--police-titre);
+}
+p{
+    color: var(--couleur-paragraphe);
+    font-family: var(--police-paragraphe);
+}
+
+/* Accueil */
+header{
+    position: fixed;
+    width: 100vw;
+    z-index: 9;
+}
+
+/* Navbar */
+nav{
+    background-color: var(--couleur-fond);
+}
+nav .container{
+    padding-right: 15em;
+}
+nav img{
+    width: 2rem;
+}
+
+
+/* Section hero */
+#hero{
+    
+}
+#hero .container{
+    padding-top: 10em;
+}
+/* Section Comment ca marche */
+#comment .container .mb-5{
+    margin: 0 18em;
+}
+
+
+/* Section Categorie services */
+#service .container .mb-5{
+    margin: 0 24em;
+}
+#service{
+    background-color: var(--couleur-secondaire);
+}
+.bg-icone{
+    background-color: var(--couleur-secondaire);
+    padding: 0.3em 1em;
+    border-radius: 10px;
+}
+
+#service .container .row p{
+    color: var(--bs-green);
+}
+
+/* Section CTA */
+#CTA{
+    background-color: var(--bs-green);
+}
+#CTA .container h2{
+    padding: 0 10rem;
+}
+
+/* Section temoignage */
+#temoignage .container .mb-5{
+    margin: 0 18em;
+}
+
+/* Footer */
+#footer img{
+    width: 5rem;
+}
+#footer h3, #footer p{
+    color: var(--couleur-fond);
+}
+#footer ul li:hover{
+    text-decoration: underline;
+}
+
+/*Freelance */
+/* section freelance */
+#freelance select{
+    margin-top: 5em;
+}
+#freelance .container .py-5{
+    padding: 0 23em;
+}
+#freelance .container .card img{
+    border-radius: 5px 5px 0 0;
+}
+#freelance .container strong{
+    color: var(--bs-green);
+}
+
+
+/* Tarif */
+/* section Tarif */
+#tarif{
+    height: 90vh;
+}
+#tarif{
+    padding-top: 3em;
+}
+#tarif .container strong{
+    color: var(--bs-green);
+}
+#tarif .container .badge{
+    margin-left: 25em;
+}
+/* Setion accordion */
+#accordion{
+    background-color: var(--couleur-secondaire);
+}
+#accordion .container{
+    padding: 2em 0 5em 0;
+}
+#accordion .accordion .accordion-item{
+    background-color: var(--couleur-secondaire);
+    border: none;
+    margin: 1em 0;
+}
+#accordion .accordion .accordion-button{
+    background-color: var(--bs-green);
+    color: var(--couleur-fond);
+    border-radius: 10px;
+    padding: 1.3em;
+}
+#accordion .accordion .accordion-body{
+    background-color: var(--couleur-fond);
+    border-radius: 10px;
+}
+#accordion .accordion .accordion-button:focus{
+    box-shadow: none;
+}
+
+
+/* A propos */
+/* Section notre histoire */
+#histoire{
+    height: 90vh;
+}
+#histoire .notre-histoire{
+    display: flex;
+    justify-content: space-between;
+    gap: 10em;
+    padding-top: 8em;
+}
+#histoire .notre-histoire img{
+    width: 80em;
+}
+#histoire .notre-histoire p{
+    font-size: 1.1em;
+}
+#valeur .row{
+    padding: 0 5em;
+}
+
+/* Section L'équipe */
+#equipe .container p{
+    margin: 0 13.5em;
+}
+#equipe .container .card img{
+    border-radius: 5px 5px 0 0;
+}
+#equipe .container h6{
+    color: var(--bs-green);
+}
+
+/* Section nos valeurs */
+#valeur{
+    background-color: var(--couleur-secondaire);
+}
+
+
+/* Contact */
+#contact .container .adresse{
+    margin-top: 8em;
+}
+#contact .container .adresse i{
+    margin-left: 10em;
+    background-color: var(--couleur-secondaire);
+    padding: 1em;
+    border-radius: 10px;
+}
+#contact .container .adresse p{
+    margin-bottom: 3em;
+}

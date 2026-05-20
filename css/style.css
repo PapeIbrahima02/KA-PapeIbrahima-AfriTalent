@@ -15,7 +15,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;         /* Les bordures et paddings sont inclus dans la taille de l'element */
 }
 /* Couleuur de fond */
 body{
@@ -64,10 +64,10 @@ nav img{
     /* background-color: var(--couleur-secondaire); */
 }
 #tire-hero{
-    font-size: 2.9em;
+    font-size: 3rem;
 }
 #sous-titre{
-    font-size: 1.5em;
+    font-size: 2rem;
 }
 #hero .btn{
     border-radius: 50px;
@@ -84,7 +84,8 @@ nav img{
 }
 /* Section Comment ca marche */
 #comment .container .mb-5{
-    margin: 0 18em;
+    font-size: 1.2rem;
+    padding: 0 15rem;
 }
 #container-CCM{
     display: grid;
@@ -115,7 +116,8 @@ nav img{
 
 /* Section Categorie services */
 #service .container .mb-5{
-    margin: 0 24em;
+    font-size: 1.2rem;
+    padding: 0 20rem;
 }
 #service{
     background-color: var(--couleur-secondaire);
@@ -136,13 +138,14 @@ nav img{
 
 /* Section temoignage */
 #temoignage .container .mb-5{
-    margin: 0 18em;
+    font-size: 1.2rem;
+    padding: 0 15rem;
 }
 .carousel-item img{
-    width: 10em;
+    width: 10rem;
 }
 .temoignage-p{              
-    padding: 0 30em;
+    padding: 0 30rem;
 }
 
 /* Section CTA */
@@ -172,7 +175,7 @@ nav img{
 /*Freelance */
 /* section freelance */
 #freelance select{
-    margin-top: 5em;
+    margin: 5rem 0 0 5rem;
 }
 #freelance .container .py-5{
     padding: 0 23em;
@@ -205,6 +208,7 @@ nav img{
 }
 #tarif .card:hover{
     box-shadow: 0 0 10px 5px var(--couleur-secondaire);
+    transform: translateY(0.5em);
 }
 
 /* Setion accordion */
@@ -214,18 +218,18 @@ nav img{
 #accordion .container{
     padding: 2em 0 5em 0;
 }
-#accordion .accordion .accordion-item{
+#accordion .accordion .accordion-item{              /*-- L'arriere accordion --*/
     background-color: var(--couleur-secondaire);
     border: none;
     margin: 1em 0;
 }
-#accordion .accordion .accordion-button{
+#accordion .accordion .accordion-button{            /*-- Le boutton de l'accordion --*/
     background-color: var(--bs-green);
     color: var(--couleur-fond);
     border-radius: 10px;
     padding: 1.3em;
 }
-#accordion .accordion .accordion-body{
+#accordion .accordion .accordion-body{              /*-- Les reponses de l'accordion --*/
     background-color: var(--couleur-fond);
     border-radius: 10px;
 }
@@ -246,7 +250,7 @@ nav img{
     padding-top: 8em;
 }
 #histoire .notre-histoire img{
-    width: 80em;
+    width: 80rem;
 }
 #histoire .notre-histoire p{
     font-size: 1.1em;
@@ -277,6 +281,9 @@ nav img{
 #valeur{
     background-color: var(--couleur-secondaire);
 }
+#col-valeur{
+    padding: 0 5rem;
+}
 
 
 /* Contact */
@@ -285,6 +292,7 @@ nav img{
 }
 form button:hover{
     box-shadow: 0 0 10px 10px var(--couleur-secondaire);
+    transform: translateY(-0.5em);
 }
 #contact .container .adresse{
     margin-top: 8em;
@@ -303,5 +311,344 @@ form button:hover{
     border-radius: 20px;
 }
 #testadd{
-    width: 30em;            /*==== pour diminuer la taille du colonne adresse ====*/
+    width: 30rem;            /*==== pour diminuer la taille du colonne adresse ====*/
+}
+
+
+
+
+/* ===========================================================
+MEDIA QUERIES — Adaptations selon la taille de l'ecran
+=========================================================== */
+
+    /* ======== Page 1 : ACCUEIL ========= */
+/* --- Mobile : ecrans de 767px et moins --- */
+@media (max-width: 767px) {
+    /* Navbar */
+    #btn-nav{
+        padding: 0 2rem;
+        font-size: 1rem;
+    }
+
+    /* Section hero */
+    #tire-hero{
+        font-size: 2rem;
+    }
+    #sous-titre{
+        font-size: 1rem;
+    }
+
+    #hero .container .me-2{             /*-- Pour styliser le bouton "je suis freelance"*/
+        padding: 0.5rem 2.3rem;
+        margin-bottom: 0.5rem;
+    }
+    #hero-img{
+        margin-top: -2rem;
+    }
+
+    /* Section Comment ca marche */
+    #comment{
+        margin-top: 20rem;
+    }
+    #comment .container .mb-5{
+        font-size: 1rem;
+        padding: 0;
+    }
+    #container-CCM{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #etape1{
+        padding: 0 1rem;
+    }
+    #etape2{
+        padding: 0 1rem;
+    }
+    #etape3{
+        padding: 0 3rem;
+    }
+
+    /* Section Categorie de services */
+    #service .container .mb-5{
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    /* Section temoignage */
+    #temoignage .container .mb-5{
+        font-size: 1rem;
+        padding: 0;
+    }
+    /* Carousel */
+    .carousel-item img{
+        width: 8rem;
+    }
+    .temoignage-p{              
+        padding: 0;
+    }
+    blockquote p{
+        padding-top: 5rem;
+    }
+
+    /* Section CTA */
+    #CTA .container h2{
+        padding: 0;
+    }
+}
+
+/* --- TABLETTE : ecrans compris entre 768px et 1023px --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Section Comment ca marche */
+    .comment{
+        margin-top: 25rem;
+    }
+    #comment .container .mb-5{
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    /* Section Categorie de services */
+    #service .container .mb-5{
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    /* Section temoignage */
+    #temoignage .container .mb-5{
+        font-size: 1rem;
+        padding: 0;
+    }
+    /* Carousel */
+    .carousel-item img{
+        width: 8rem;
+    }
+    .temoignage-p{              
+        padding: 0;
+    }
+    blockquote p{
+        padding-top: 5rem;
+    }
+
+    /* Section CTA */
+    #CTA .container h2{
+        padding: 0;
+    }
+}
+
+/* --- ORDINATEUR : ecrans de 1200px et plus --- */
+@media (min-width: 1200px) {
+    /* Section Comment ca marche */
+    .comment{
+        margin-top: 8rem;
+    }
+
+    /* Section temoignage */
+    .temoignage-p{              
+        padding: 0 20rem;
+    }
+
+    /* Section CTA */
+    #CTA .container h2{
+        padding: 0;
+    }
+}
+
+    /* ======== Page 2 : Freelance ========= */
+/* --- Mobile : ecrans de 767px et moins --- */
+@media (max-width: 767px) {
+    /* Navbar */
+    #btn-nav{
+        padding: 0 2rem;
+        font-size: 1rem;
+    }
+    #freelance .container .py-5{
+        padding: 0;
+        margin-top: 10rem;
+    }
+}
+
+/* --- TABLETTE : ecrans compris entre 768px et 1023px --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #freelance select{
+        width: 8rem;
+        margin-left: 2rem;
+    }
+    #freelance .container .py-5{
+        padding: 0;
+        margin-top: 25rem;
+    }
+}
+
+/* --- ORDINATEUR : ecrans de 1200px et plus --- */
+@media (min-width: 1200px) {
+     #freelance .container .py-5{
+        margin-top: 5rem;
+    }
+}
+
+    /* ======== Page 3 : Tarif ========= */
+/* --- Mobile : ecrans de 767px et moins --- */
+@media (max-width: 767px) {
+    /* Navbar */
+    #btn-nav{
+        padding: 0 2rem;
+        font-size: 1rem;
+    }
+
+    /* Section Tarif */
+    #tarif .container h2{
+        margin-top: 10rem;
+    }
+    #tarif .container .badge{
+        margin-left: 0;
+    }
+    #tarif{
+        margin-bottom: 35rem;
+    }
+    #tarif .row{
+        gap: 2rem;
+    }
+
+    /* Section Accordion */
+    #FAQ{
+        padding-top: 10rem;
+    }
+}
+
+/* --- TABLETTE : ecrans compris entre 768px et 1023px --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Section Tarif */
+    #tarif .container h2{
+        margin-top: 10rem;
+    }
+    #tarif .container .badge{
+        margin-left: 15rem;
+    }
+    #tarif{
+        margin-bottom: 35rem;
+    }
+    #tarif .row{
+        gap: 2rem;
+    }
+}
+
+/* --- ORDINATEUR : ecrans de 1200px et plus --- */
+@media (min-width: 1200px) {
+    #tarif .container .badge{
+        margin-left: 15rem;
+    }
+}
+
+   /* ======== Page 4 : A propos ========= */
+/* --- Mobile : ecrans de 767px et moins --- */
+@media (max-width: 767px) {
+    /* Navbar */
+    #btn-nav{
+        padding: 0 2rem;
+        font-size: 1rem;
+    }
+    /* Section Notre histoire */
+    #histoire .notre-histoire{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding-top: 5rem;
+    }
+    #histoire .notre-histoire img{
+        width: 100%;
+    }
+    #histoire .notre-histoire p{
+        font-size: 1rem;
+    }
+    /* Section L'équipe */
+    #equipe .container p{
+        margin: 0;
+        text-align: center;
+    }
+    #equipe .row{
+        padding: 0 1rem;
+    }
+    #equipe .row .card{
+        margin-bottom: 1rem;
+    }
+    /* Section nos valeurs */
+    #col-valeur{
+        padding: 0;
+    }
+}
+/* --- TABLETTE : ecrans compris entre 768px et 1023px --- */
+@media (min-width: 768px) and (max-width: 1023px)  {
+    /* Section Notre histoire */
+    #histoire .notre-histoire{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        padding-top: 5rem;
+    }
+    #histoire .notre-histoire img{
+        width: 100%;
+    }
+    #equipe .container p{
+        margin: 0;
+        text-align: center;
+    }
+    #equipe .row{
+        padding: 0 1rem;
+    }
+    #equipe .row .card{
+        margin-bottom: 1rem;
+    }
+    /* Section nos valeurs */
+    #col-valeur{
+        padding: 0;
+    }
+}
+/* --- ORDINATEUR : ecrans de 1200px et plus --- */
+@media (min-width: 1200px) {
+    #histoire .notre-histoire{   
+        gap: 5rem;  
+    }
+}
+
+    /* ======== Page 5 : Contact ========= */
+/* --- Mobile : ecrans de 767px et moins --- */
+@media (max-width: 767px) {
+    /* Navbar */
+    #btn-nav{
+        padding: 0 2rem;
+        font-size: 1rem;
+    }
+    #contact h2{
+        padding-top: 5rem;
+    }
+    #contact .container .adresse i{     /*==== Pour gerer l'icone ====*/
+        margin-left: 2rem;
+    }
+    #contact iframe{
+        width: 100%;
+    }
+}
+
+/* --- TABLETTE : ecrans de 768px et moins --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #contact h2{
+        padding-top: 5rem;
+    }
+    #test-form{
+        width: 100%;
+    }
+    #testadd{
+        width: 100%;            /*==== pour gerer la taille du colonne adresse ====*/
+    }
+    #contact iframe{
+        width: 100%;
+    }
+}
+/* --- ORDINATEUR : ecrans de 1200px et plus --- */
+@media (min-width: 1200px) {
+    #contact iframe{
+        width: 50%;
+        margin-top: 5rem;
+    }
 }

@@ -1,11 +1,11 @@
-/* Variables */
+/* Declaration de Variables */
 :root {   
     /* Couleurs */
-    --bs-green: #198754;   /*Couleur principale*/
+    --bs-green: #198754;            /*Couleur principale*/
   --couleur-secondaire : #EAF8F3;   /*Couleur secondaire*/
-  --couleur-fond : #FFFFFF;    /*Couleur de fond*/
-  --couleur-paragraphe : #555555;    /*Couleur paragraphe et icones*/
-  --couleur-titre : #000000;    /*Couleur titre*/
+  --couleur-fond : #FFFFFF;         /*Couleur de fond*/
+  --couleur-paragraphe : #555555;    /*Couleur paragraphe*/
+  --couleur-titre : #000000;        /*Couleur titre*/
 
   /* police */
   --police-titre : 'poppins', sans-serif;
@@ -30,11 +30,27 @@ p{
     color: var(--couleur-paragraphe);
     font-family: var(--police-paragraphe);
 }
-.btn{
-    /* border-radius: 50px; */
+
+
+/* =========================
+   DARK MODE (Couleurs)
+========================= */
+
+.dark-mode{
+
+    --couleur-fond: #121212;             /*Couleur de fond*/
+    --couleur-secondaire: #1E2A24;      /*Couleur secondaire*/
+    --couleur-titre: #FFFFFF;           /*Couleur titre*/
+    --couleur-paragraphe: #B3B3B3;      /*Couleur paragraphe*/
+    --bs-green: #20c997;               /*Couleur principale*/
+
 }
 
-/* Accueil */
+
+
+
+
+
 header{
     position: fixed;
     width: 100vw;
@@ -43,10 +59,22 @@ header{
 
 /* Navbar */
 nav{
-    background-color: var(--couleur-fond);
+    background-color: transparent;    
 }
+/* Navbar sous dark mode */
+.dark-mode nav .navbar-toggler-icon{
+    background-color: var(--bs-green);          /* Style Bouton du Menu hamburger */
+}
+.dark-mode nav{
+    background-color: transparent;        
+}
+.dark-mode nav a{
+    color: var(--couleur-titre);            /*=== Couleur police navbar sous dark mode*/
+}
+
 nav .container{
     padding-right: 15em;
+    padding-top: 2rem;
 }
 nav .btn{
     border-radius: 50px;
@@ -54,14 +82,41 @@ nav .btn{
 nav img{
     width: 2rem;
 }
+/* Style du navbar au scroll */
+.navbar-scroll{
+    background-color: var(--couleur-fond);
+    box-shadow: 0 0 10px 5px var(--couleur-secondaire);
+}
+.dark-mode .navbar-scroll{
+    background-color: var(--couleur-secondaire);            /* Style du navbar au scroll sous effet dark mode */
+}
+.navbar-scroll .container{
+    padding-top: 0;                             /* Reduit l'espace haut de la navbar */
+}
 .btn{
     border-radius: 50px;
 }
+/* Bouton dark-mode */
+#dark-mode{
+    margin-left: 5rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 10px;
+    color: var(--couleur-titre);
+    background: transparent;
+    /* border: none; */
+}
+/* Style du bouton sous effet dark mode */
+.dark-mode #dark-mode{
+    background-color: var(--couleur-fond);
+    border: none;
+    padding: 0.4rem 0.6rem;
+}
 
+
+/* ===== Accueil ====*/
 /* Section hero */
 #hero{
     height: 100vh;
-    /* background-color: var(--couleur-secondaire); */
 }
 #tire-hero{
     font-size: 3rem;
@@ -109,6 +164,9 @@ nav img{
     padding: 0.3em 0.7em;
     border-radius: 20px;
 }
+.dark-mode .bg-i{
+    color: var(--couleur-titre);        /* L'icone de la section CCM sous dark mode*/
+}
 #etape1, #etape2, #etape3{
     border-radius: 20px;
 }
@@ -127,9 +185,7 @@ nav img{
     padding: 0.3em 1em;
     border-radius: 20px;
 }
-#service .container .row p{
-    color: var(--bs-green);
-}
+
 #service .container .row .col-12:hover{
     /* transform: translateY(-2.5em); */
     transform: rotate(5deg);
@@ -147,6 +203,10 @@ nav img{
 .temoignage-p{              
     padding: 0 30rem;
 }
+/* Temoignage sous dark mode */
+.dark-mode .temoignage-p{
+    background-color: var(--couleur-secondaire);
+}
 
 /* Section CTA */
 #CTA{
@@ -162,6 +222,9 @@ nav img{
 
 
 /* Footer */
+#footer{
+    background-color: var(--couleur-titre);
+}
 #footer img{
     width: 5rem;
 }
@@ -171,8 +234,31 @@ nav img{
 #footer ul li:hover{
     text-decoration: underline;
 }
+/* Footer sous dark mode */
+.dark-mode #footer{
+    background-color: var(--couleur-secondaire);
+}
+/* .dark-mode #footer h3, #footer p{
+    color: var(--couleur-titre);
+} */
 
-/*Freelance */
+/* Bouton retour en haut */
+#btn-Top{
+    position: fixed;
+    bottom: 20px;               /* Distance depuis le bas */
+    right: 20px;                /* Distance depuis le cote droit */
+    padding: 0 5px;
+    font-size: 2em;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--bs-green);
+    color: var(--couleur-fond);
+}
+#btn-Top:hover{
+    transform: translateY(-5px);
+}
+
+/*==== Freelance ====*/
 /* section freelance */
 #freelance select{
     margin: 5rem 0 0 5rem;
@@ -190,9 +276,11 @@ nav img{
     box-shadow: 0 0 10px 5px var(--couleur-secondaire);
     transform: translateY(-1em);
 }
+.dark-mode #freelance .container .card{
+    background-color: var(--couleur-secondaire);            /* Couleur de la carte sous dark mode */
+}
 
-
-/* Tarif */
+/*==== Tarif ====*/
 /* section Tarif */
 #tarif{
     height: 90vh;
@@ -209,6 +297,13 @@ nav img{
 #tarif .card:hover{
     box-shadow: 0 0 10px 5px var(--couleur-secondaire);
     transform: translateY(0.5em);
+}
+/* card sous effet dark mode */
+.dark-mode #tarif .card{
+    background-color: var(--couleur-secondaire);
+}
+.dark-mode #tarif .card ul li{
+    color: var(--couleur-paragraphe);
 }
 
 /* Setion accordion */
@@ -233,12 +328,15 @@ nav img{
     background-color: var(--couleur-fond);
     border-radius: 10px;
 }
+.dark-mode #accordion .accordion .accordion-body{
+    color: var(--couleur-titre);
+}
 #accordion .accordion .accordion-button:focus{
     box-shadow: none;
 }
 
 
-/* A propos */
+/*==== A propos ====*/
 /* Section notre histoire */
 #histoire{
     height: 90vh;
@@ -252,11 +350,11 @@ nav img{
 #histoire .notre-histoire img{
     width: 80rem;
 }
+.dark-mode #histoire .notre-histoire img{
+    border-radius: 10px;                       /* Bordure de l'image sous dark mode*/
+}
 #histoire .notre-histoire p{
     font-size: 1.1em;
-}
-#valeur .row{
-    padding: 0 5em;
 }
 
 /* Section L'équipe */
@@ -273,6 +371,9 @@ nav img{
     box-shadow: 0 0 10px 5px var(--couleur-secondaire);
     transform: rotate(2deg);
 }
+.dark-mode #equipe .container .card{
+    background-color: var(--couleur-secondaire);        /* background du card sous dark mode */
+}
 #equipe .container h6{
     color: var(--bs-green);
 }
@@ -281,12 +382,15 @@ nav img{
 #valeur{
     background-color: var(--couleur-secondaire);
 }
+#valeur .row{
+    padding: 0 5em;
+}
 #col-valeur{
     padding: 0 5rem;
 }
 
 
-/* Contact */
+/*==== Contact ====*/
 #contact .container .col-12{
     border-radius: 20px;
 }
@@ -310,8 +414,20 @@ form button:hover{
     padding: 5em 0 3em 0;       /*==== Pour gerer l'espace interieur de l'adresse et bordure ====*/
     border-radius: 20px;
 }
-#testadd{
-    width: 30rem;            /*==== pour diminuer la taille du colonne adresse ====*/
+#id-add{
+    width: 30rem;            /*==== pour diminuer la largeur de la colonne adresse ====*/
+}
+
+/* Formulaire sous dark mode */
+.dark-mode #id-form{
+    background-color: var(--couleur-secondaire);
+}
+.dark-mode form label{
+    color: var(--couleur-titre);
+}
+/* Adresse sous dark mode */
+.dark-mode #adresse{
+    background-color: var(--couleur-secondaire);
 }
 
 

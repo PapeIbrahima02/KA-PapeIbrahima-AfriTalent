@@ -1,4 +1,6 @@
-/* Declaration de Variables */
+/* =========================
+   Declaration de Variables
+========================= */
 :root {   
     /* Couleurs */
     --bs-green: #198754;            /*Couleur principale*/
@@ -35,19 +37,13 @@ p{
 /* =========================
    DARK MODE (Couleurs)
 ========================= */
-
 .dark-mode{
-
     --couleur-fond: #121212;             /*Couleur de fond*/
     --couleur-secondaire: #1E2A24;      /*Couleur secondaire*/
     --couleur-titre: #FFFFFF;           /*Couleur titre*/
     --couleur-paragraphe: #B3B3B3;      /*Couleur paragraphe*/
     --bs-green: #20c997;               /*Couleur principale*/
-
 }
-
-
-
 
 
 
@@ -113,7 +109,7 @@ nav img{
 }
 
 
-/* ===== Accueil ====*/
+/* ===== Accueil =====*/
 /* Section hero */
 #hero{
     height: 100vh;
@@ -130,9 +126,11 @@ nav img{
 #hero-img{
     border-radius: 10px;
     width: 90%;
+    transform: rotate(0deg);                    /* Valeur de depart */
+    transition: transform 2s ease;              /* Duree de la transition 1s*/
 }
 #hero-img:hover{
-    transform: rotate(10deg);       /*==== Rotation de l'image en cas de survol ====*/
+    transform: rotate(10deg);                   /*==== Rotation de l'image en cas de survol ====*/
 }
 #hero .container{
     padding-top: 8em;
@@ -185,10 +183,12 @@ nav img{
     padding: 0.3em 1em;
     border-radius: 20px;
 }
-
 #service .container .row .col-12:hover{
-    /* transform: translateY(-2.5em); */
-    transform: rotate(5deg);
+    transform: rotate(0deg);                                /* Valeur de depart */
+    transition: transform 1s ease;                          /* transition d'une seconde */
+}
+#service .container .row .col-12:hover{
+    transform: rotate(5deg);                                /* Rotation de 5deg en cas se survol */
 }
 
 
@@ -242,7 +242,7 @@ nav img{
     color: var(--couleur-titre);
 } */
 
-/* Bouton retour en haut */
+/*==== Bouton retour en haut ====*/
 #btn-Top{
     position: fixed;
     bottom: 20px;               /* Distance depuis le bas */
@@ -253,9 +253,11 @@ nav img{
     border-radius: 10px;
     background-color: var(--bs-green);
     color: var(--couleur-fond);
+    transform: translateY(0);
+    transition: transform 1s ease;
 }
 #btn-Top:hover{
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 /*==== Freelance ====*/
@@ -273,8 +275,12 @@ nav img{
     color: var(--bs-green);
 }
 #freelance .container .card:hover{
+    transform: translateY(0);                                        /* Valeur de depart*/
+    transition: transform 1s ease;                                  /* Duree de la transition 1s */
+}
+#freelance .container .card:hover{
     box-shadow: 0 0 10px 5px var(--couleur-secondaire);
-    transform: translateY(-1em);
+    transform: translateY(-1.5em);                             /* Card monte en haut en cas de survol */
 }
 .dark-mode #freelance .container .card{
     background-color: var(--couleur-secondaire);            /* Couleur de la carte sous dark mode */
@@ -294,9 +300,13 @@ nav img{
 #tarif .container .badge{
     margin-left: 25em;
 }
+#tarif .card{
+    transform: translateY(0);                                 /* Valeur de depart*/
+    transition: transform 1s ease;                           /* Duree de la transition 1s */
+}
 #tarif .card:hover{
     box-shadow: 0 0 10px 5px var(--couleur-secondaire);
-    transform: translateY(0.5em);
+    transform: translateY(1em);
 }
 /* card sous effet dark mode */
 .dark-mode #tarif .card{
@@ -367,6 +377,10 @@ nav img{
 #equipe .container .card img{
     border-radius: 5px 5px 0 0;
 }
+#equipe .container .card{
+    transform: rotate(0);                                           /* Valeur de depart*/
+    transition: transform 1s ease;                          /* Duree de la transition 1s */
+}
 #equipe .container .card:hover{
     box-shadow: 0 0 10px 5px var(--couleur-secondaire);
     transform: rotate(2deg);
@@ -430,6 +444,15 @@ form button:hover{
     background-color: var(--couleur-secondaire);
 }
 
+
+/*====== JS, Sections en fondu (fade-in) ======*/
+.fade-in{
+    opacity: 0;                                                       /* invisible au depart */
+    transition: opacity 1s ease-in-out;                              /* transition d'une seconde */
+}
+.fade-in.sectionFade-in{
+    opacity: 1;                                                 /* Visble apres d'etection de la section */
+}
 
 
 

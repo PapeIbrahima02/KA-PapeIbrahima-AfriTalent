@@ -270,6 +270,7 @@ nav img{
 }
 #freelance .container .card img{
     border-radius: 5px 5px 0 0;
+    width: 100%;                                /* L'image prend 100% la largeur de la carte */
 }
 #freelance .container strong{
     color: var(--bs-green);
@@ -442,6 +443,17 @@ form button:hover{
 /* Adresse sous dark mode */
 .dark-mode #adresse{
     background-color: var(--couleur-secondaire);
+}
+
+/* JS, Validation formulaire */
+.erreur{
+    color: red;
+    font-size: 0.9em;
+}
+.success{
+    color: green;
+    font-size: 1.1em;
+    margin-top: 10px;
 }
 
 

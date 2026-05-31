@@ -1,3 +1,4 @@
+// COMMIT 6
 //==== Bouton Dark Mode avec localStorage ====
 let darkMode = document.querySelector("#dark-mode");
 
@@ -43,6 +44,7 @@ btnHaut.addEventListener("click", () => {                       // ecoute si l'u
 });
 
 
+// COMMIT 7 
 //==== Setion Hero (Accueil) ====
 //======= Les compteurs de statistiques qui s'animent de 0 à leur valeur au scroll ======
 // Freelances
@@ -66,7 +68,7 @@ const observeur = new IntersectionObserver((entries) => {                       
 });
 // 2- L'element a surveiller
 let statistiques = document.querySelector("#compteur");
-if (statistiques) observeur.observe(statistiques);
+if (statistiques) observeur.observe(statistiques);                                      // if, verifie d'abord avant d'observer
 
 // Entreprises
 // 1- creation de variable qui va observer les elements
@@ -89,7 +91,7 @@ const observeur1 = new IntersectionObserver((entries) => {                      
 });
 // 2- L'element a surveiller
 let statistiques1 = document.querySelector("#compteur1");
-if (statistiques1) observeur1.observe(statistiques1);
+if (statistiques1) observeur1.observe(statistiques1);                                   // if, verifie d'abord avant d'observer
 
 // Missions réalisées
 // 1- creation de variable qui va observer les elements
@@ -112,7 +114,7 @@ const observeur2 = new IntersectionObserver((entries) => {                      
 });
 // 2- L'element a surveiller
 let statistiques2 = document.querySelector("#compteur2");
-if (statistiques2) observeur2.observe(statistiques2);
+if (statistiques2) observeur2.observe(statistiques2);                                   // if, verifie d'abord avant d'observer
 
 
 //==== Setion chiffres cles (A propos) ====
@@ -190,7 +192,7 @@ if(chiffres2) controleur2.observe(chiffres2);                                   
 
 //======= Sections qui apparaissent en fondu (fade-in) ========
     // creation de variable qui va observer les elements
-const monObservateur = new IntersectionObserver((entries) =>{                           // entries, liste elements a surveille
+const monObservateur = new IntersectionObserver((entries) =>{                           // entries, liste des elements a surveille
     entries.forEach((entry) => {                                                        // forEach, examine chaque element 1 par 1
 
         // On verifie si l'element est visible
@@ -201,6 +203,87 @@ const monObservateur = new IntersectionObserver((entries) =>{                   
 });
     // Les elements a surveiller
 const mesSection = document.querySelectorAll(".fade-in");
-mesSection.forEach((section) => {
+mesSection.forEach((section) => {                                                     // forEach, examine chaque element 1 par 1 (ici, section par section)
     monObservateur.observe(section);
 });
+
+
+// COMMIT 8
+//===== filtrage dynamique des freelances ======
+const filtre = document.querySelector("#filtre");
+const cartes = document.querySelectorAll(".card");
+
+if (filtre) {            // if, permet de verifier d'abord avant de verifier
+    filtre.addEventListener("change", () => {                                               // On ecoute si l'utilisateur change de categorie
+        let choix = filtre.value;                                                           // Pour recuperer la valeur choisie
+        cartes.forEach((carte) => {                                                         // forEach, examine chaque element 1 par 1
+            let categorie = carte.getAttribute("data-categorie");                           // Pour recuperer la categorie de la carte
+            if (choix === "tous") {
+                carte.style.display = "block";                                              // On affiche toutes les cartes
+            }else if(choix === categorie) {
+                carte.style.display = "block";                                            // On affiche seulement les cartes de la categorie concernee
+            }else {
+                carte.style.display = "none";                                             // Pour cacher les cartes non concernees
+            }
+        });
+    });
+};
+
+// Validation du formulaire
+const form = document.getElementById('inscriptionForm');
+const nom = document.getElementById('nom');
+const prenom = document.getElementById('prenom');
+const email = document.getElementById('mail');
+const sujet = document.getElementById('sujet');
+const message = document.getElementById('message');
+const confirmation = document.getElementById('confirmation');
+
+if (form) {                     // if, permet de verifier d'abord avant d'executer
+    form.addEventListener('submit', function(event) {       // event, parametre permettant de stocker les infos declanchees par l'evenement submit 
+        let valid = true;
+        // Réinitialiser les messages d'erreur
+        document.getElementById("nomErreur").textContent = '';
+        document.getElementById("prenomErreur").textContent = '';
+        document.getElementById("mailErreur").textContent = '';
+        document.getElementById("sujetErreur").textContent = '';
+        document.getElementById("messageErreur").textContent = '';
+
+        // Validation du nom
+        if (nom.value.trim() === "") {             // .trim(), permet de supprimer les espaces du debut et du fin
+            document.getElementById("nomErreur").textContent = 'Le nom est requis.';
+            valid = false;
+        }
+
+        // Validation du prenom
+        if (prenom.value.trim() === '') {             // .trim(), permet de supprimer les espaces du debut et du fin
+            document.getElementById('prenomErreur').textContent = 'Le prenom est requis.';
+            valid = false;
+        }
+
+        // Validation de l'email
+        if (!mail.value.includes('@')) {           // .include, permet de verifier si l’utilisateur n’a pas mis @ dans son email
+            document.getElementById('mailErreur').textContent = 'Email invalide.';
+            valid = false;
+        }
+
+         // Validation du sujet
+        if (sujet.value === 'choix') {           
+            document.getElementById('sujetErreur').textContent = 'Le sujet est requis.';
+            valid = false;
+        }
+
+        // Validation du message
+        if (message.value.length < 20) {
+            document.getElementById("messageErreur").textContent = 'Le message doit contenir au moins 20 caractères.';
+            valid = false;
+        }
+
+        if (!valid) {               // Si le formulaire n’est PAS valide
+            event.preventDefault(); // Empêche la soumission du formulaire
+        } else {
+            // Afficher un message de succès
+            confirmation.textContent = 'Message envoye !';
+            // form.reset();         // permet de vider les champ du formulaire
+        }
+    });
+}

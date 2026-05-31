@@ -74,34 +74,43 @@
                     
                     <!-- formulaire -->
                     <div class="col-12 col-md-6 col-lg-6 shadow py-5" id="id-form">
-                        <form action="" method="">
+                        <form action="" method="" id="inscriptionForm">
                             <div class="mb-3">
                                 <label for="nom" class="form-label">Nom</label>
-                                <input type="text" class="form-control" id="nom" name="nom" placeholder="Mane" required>
+                                <input type="text" class="form-control" id="nom" name="nom" placeholder="Mane" >
+                                <span class="erreur" id="nomErreur"></span>
                             </div>
                             <div class="mb-3">
                                 <label for="prenom" class="form-label">Prenom</label>
-                                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Sadio" required>
+                                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Sadio" >
+                                <span class="erreur" id="prenomErreur"></span>
                             </div>
                             <div class="mb-3">
                                 <label for="mail" class="form-label">Mail</label>
-                                <input type="email" class="form-control" id="mail" name="mail" placeholder="reussir@gmail.com" required>
+                                <input type="email" class="form-control" id="mail" name="mail" placeholder="reussir@gmail.com" >
+                                <span class="erreur" id="mailErreur"></span>
                             </div>
                             <div class="mb-3">
                                 <label for="sujet" class="form-label">Sujet</label>
-                                <select name="sujet" class="form-control" id="sujet" required>
+                                <select name="sujet" class="form-control" id="sujet" >
                                     <option value="choix">Choisir un sujet</option>
                                     <option value="Support">Support</option>
                                     <option value="demande">Demande d'information</option>
+                                    <option value="inscription">Inscription</option>
                                     <option value="Partenariat">Partenariat</option>
                                 </select>
+                                <span class="erreur" id="sujetErreur"></span>
                             </div>
                             <div>
                                 <label for="message" class="form-label">Message</label>
-                                <textarea name="message" class="form-control" id="message" rows="4" cols="50" required></textarea>
+                                <textarea name="message" class="form-control" id="message" rows="4" cols="50" ></textarea>
+                                <span class="erreur" id="messageErreur"></span>
                             </div>
+
                             <button type="submit" class="btn btn-success mt-5" >Soumettre</button>
                         </form>
+
+                        <div id="confirmation" class="success"></div>
                     </div>
 
                     <!-- Adresse -->

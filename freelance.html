@@ -67,14 +67,14 @@
         <!-- Catalogue de freelances -->
         <section id="freelance" class="pt-5">
             <!-- Barre de filtre -->
-            <select name="" id="" class="btn btn-success">
-                <option value="">Tous</option>
-                <option value="">Développement Web</option>
-                <option value="">Design UI/UX</option>
-                <option value="">Marketing Digital</option>
-                <option value="">Data & IA</option>
-                <option value="">DevOps & Cloud</option>
-                <option value="">Rédaction Tech</option>
+            <select name="" id="filtre" class="btn btn-success">
+                <option value="tous">Tous</option>
+                <option value="developpeur">Développement Web</option>
+                <option value="Designer">Design UI/UX</option>
+                <option value="marketer">Marketing Digital</option>
+                <option value="data">Data & IA</option>
+                <option value="DevOps">DevOps & Cloud</option>
+                <option value="Tech">Rédaction Tech</option>
             </select>
 
             <!-- Grille de profils -->
@@ -85,7 +85,7 @@
                 </div>
                 <div class="row g-5">
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
+                        <div class="card" data-categorie="developpeur">
                             <img src="images/Bamba diouf.jpg" alt="Bamba Diouf">
                             <div class="card-body">
                                 <h3>Ahmadou Bamba DIOUF</h3>
@@ -105,7 +105,7 @@
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
+                        <div class="card" data-categorie="Designer">
                             <img src="images/Farah_Hakim.jpg" alt="Farah Hakim">
                             <div class="card-body">
                                 <h3>Farah Hakim</h3>
@@ -125,7 +125,7 @@
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
+                        <div class="card" data-categorie="data">
                             <img src="images/Ousmane_Pouye.jpg" alt="Ousmane Pouye Diagne">
                             <div class="card-body">
                                 <h3>Ousmane Pouye Diagne</h3>
@@ -145,7 +145,7 @@
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
+                        <div class="card" data-categorie="Tech">
                             <img src="images/Christine_Capou.jpg" alt="Christine Capou">
                             <div class="card-body">
                                 <h3>Christine Capou</h3>
@@ -165,7 +165,7 @@
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
+                        <div class="card" data-categorie="marketer">
                             <img src="images/Mouhamed_ElHazali.jpg" alt="Mouhamed El Ghazi">
                             <div class="card-body">
                                 <h3>Mouhamed El Ghazi</h3>
@@ -185,7 +185,7 @@
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
+                        <div class="card" data-categorie="DevOps">
                             <img src="images/Rose_Williams.jpg" alt="Rose Williams">
                             <div class="card-body">
                                 <h3>Rose Williams</h3>
@@ -205,7 +205,7 @@
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
+                        <div class="card" data-categorie="developpeur">
                             <img src="images/Pape_ibrahima.jpg" alt="Pape Ibrahima KA">
                             <div class="card-body">
                                 <h3>Pape Ibrahima KA</h3>
@@ -225,7 +225,7 @@
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
+                        <div class="card" data-categorie="Designer">
                             <img src="images/Ftim_Mahmoud.jpg" alt="Fatim Mahmoud">
                             <div class="card-body">
                                 <h3>Fatim Mahmoud</h3>
@@ -245,7 +245,7 @@
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
+                        <div class="card" data-categorie="DevOps">
                             <img src="images/Patrice_Mbia.jpg" alt="Patrice M'bia">
                             <div class="card-body">
                                 <h3>Patrice M'bia</h3>

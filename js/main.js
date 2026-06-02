@@ -49,11 +49,11 @@ btnHaut.addEventListener("click", () => {                       // ecoute si l'u
 //======= Les compteurs de statistiques qui s'animent de 0 à leur valeur au scroll ======
 // Freelances
 // 1- creation de variable qui va observer les elements                                        
-const observeur = new IntersectionObserver((entries) => {                              // entries, liste elements a surveille           
-    entries.forEach((entry) => {                                                       // forEach, examine chaque element 1 par 1
+const observeur = new IntersectionObserver((entrer) => {                              // entrer, liste elements a surveille           
+    entrer.forEach((entre) => {                                                       // forEach, examine chaque element 1 par 1
 
         // On verifie si l'element est visible
-        if (entry.isIntersecting) {                                                    // Pour verifier si l'element est visible à l'écran 
+        if (entre.isIntersecting) {                                                    // Pour verifier si l'element est visible à l'écran 
             let cpt = 0;
             let arret = 2500;
             let interval = setInterval( () => {                                         // Methode pour appeller de manière répétée la fonction
@@ -68,15 +68,16 @@ const observeur = new IntersectionObserver((entries) => {                       
 });
 // 2- L'element a surveiller
 let statistiques = document.querySelector("#compteur");
-if (statistiques) observeur.observe(statistiques);                                      // if, verifie d'abord avant d'observer
-
+if (statistiques) {                                                 // if, verifie d'abord avant d'observer
+    observeur.observe(statistiques);                                      
+};
 // Entreprises
 // 1- creation de variable qui va observer les elements
-const observeur1 = new IntersectionObserver((entries) => {                              // entries, liste elements a surveille           
-    entries.forEach((entry) => {                                                       // forEach, examine chaque element 1 par 1
+const observeur1 = new IntersectionObserver((entrer) => {                              // entrer, liste elements a surveille           
+    entrer.forEach((entre) => {                                                       // forEach, examine chaque element 1 par 1
 
         // On verifie si l'element est visible
-        if (entry.isIntersecting) {                                                    // Pour verifier si l'element est visible à l'écran 
+        if (entre.isIntersecting) {                                                    // Pour verifier si l'element est visible à l'écran 
             let cpt1 = 0;
             let arret1 = 800;
             let interval1 = setInterval( () => {                                         // Methode pour appeller de manière répétée la fonction
@@ -91,15 +92,16 @@ const observeur1 = new IntersectionObserver((entries) => {                      
 });
 // 2- L'element a surveiller
 let statistiques1 = document.querySelector("#compteur1");
-if (statistiques1) observeur1.observe(statistiques1);                                   // if, verifie d'abord avant d'observer
-
+if (statistiques1) {                                                    // if, permet de verifier d'abord avant d'observer
+    observeur1.observe(statistiques1);                                   
+};
 // Missions réalisées
 // 1- creation de variable qui va observer les elements
-const observeur2 = new IntersectionObserver((entries) => {                              // entries, liste elements a surveille           
-    entries.forEach((entry) => {                                                       // forEach, examine chaque element 1 par 1
+const observeur2 = new IntersectionObserver((entrer) => {                              // entrer, liste elements a surveille           
+    entrer.forEach((entre) => {                                                       // forEach, examine chaque element 1 par 1
 
         // On verifie si l'element est visible
-        if (entry.isIntersecting) {                                                    // Pour verifier si l'element est visible à l'écran 
+        if (entre.isIntersecting) {                                                    // Pour verifier si l'element est visible à l'écran 
             let cpt2 = 0;
             let arret2 = 10500;
             let interval2 = setInterval( () => {                                         // Methode pour appeller de manière répétée la fonction
@@ -114,18 +116,19 @@ const observeur2 = new IntersectionObserver((entries) => {                      
 });
 // 2- L'element a surveiller
 let statistiques2 = document.querySelector("#compteur2");
-if (statistiques2) observeur2.observe(statistiques2);                                   // if, verifie d'abord avant d'observer
+if (statistiques2) {                                                    // if, verifie d'abord avant d'observer
+    observeur2.observe(statistiques2);                                   
 
-
+};
 //==== Setion chiffres cles (A propos) ====
 //======= Les compteurs de statistiques qui s'animent de 0 à leur valeur au scroll ======
 // Freelance
 // 1- creation de variable qui va observer les elements
-const controleur = new IntersectionObserver((entries) => {                              // entries, liste elements a surveille           
-    entries.forEach((entry) => {                                                       // forEach, examine chaque element 1 par 1
+const controleur = new IntersectionObserver((entrer) => {                              // entrer, liste elements a surveille           
+    entrer.forEach((entre) => {                                                       // forEach, examine chaque element 1 par 1
 
         // On verifie si l'element est visible
-        if (entry.isIntersecting) {                                                    // Pour verifier si l'element est visible à l'écran 
+        if (entre.isIntersecting) {                                                    // Pour verifier si l'element est visible à l'écran 
             let nbr = 0;
             let stop = 2500;
             let rappel = setInterval( () => {                                         // Methode pour appeller de manière répétée la fonction
@@ -140,15 +143,16 @@ const controleur = new IntersectionObserver((entries) => {                      
 });
 // 2- L'element a surveiller
 let chiffres = document.querySelector("#free-lance");
-if (chiffres) controleur.observe(chiffres);                                         // if, verifie d'abord avant d'observer
-
+if (chiffres) {                                                             // if, verifie d'abord avant d'observer
+    controleur.observe(chiffres);                                         
+};
 // Projets realises
 // 1- creation de variable qui va observer les elements
-const controleur1 = new IntersectionObserver((entries) => {                              // entries, liste elements a surveille           
-    entries.forEach((entry) => {                                                       // forEach, examine chaque element 1 par 1
+const controleur1 = new IntersectionObserver((entrer) => {                              // entrer, liste elements a surveille           
+    entrer.forEach((entre) => {                                                       // forEach, examine chaque element 1 par 1
 
         // On verifie si l'element est visible
-        if (entry.isIntersecting) {                                                    // Pour verifier si l'element est visible à l'écran 
+        if (entre.isIntersecting) {                                                    // Pour verifier si l'element est visible à l'écran 
             let nbr1 = 0;
             let stop1 = 12000;
             let rappel1 = setInterval( () => {                                         // Methode pour appeller de manière répétée la fonction
@@ -163,15 +167,16 @@ const controleur1 = new IntersectionObserver((entries) => {                     
 });
 // 2- L'element a surveiller
 let chiffres1 = document.querySelector("#projets");
-if(chiffres1) controleur1.observe(chiffres1);                                        // if, verifie d'abord avant d'observer   
-
+if(chiffres1) {                                                             // if, verifie d'abord avant d'observer
+    controleur1.observe(chiffres1);                                           
+};
 // Entreprise partenaire
 // 1- creation de variable qui va observer les elements
-const controleur2 = new IntersectionObserver((entries) => {                              // entries, liste elements a surveille           
-    entries.forEach((entry) => {                                                       // forEach, examine chaque element 1 par 1
+const controleur2 = new IntersectionObserver((entrer) => {                              // entrer, liste elements a surveille           
+    entrer.forEach((entre) => {                                                       // forEach, examine chaque element 1 par 1
 
         // On verifie si l'element est visible
-        if (entry.isIntersecting) {                                                    // Pour verifier si l'element est visible à l'écran 
+        if (entre.isIntersecting) {                                                    // Pour verifier si l'element est visible à l'écran 
             let nbr2 = 0;
             let stop2 = 800;
             let rappel2 = setInterval( () => {                                         // Methode pour appeller de manière répétée la fonction
@@ -186,18 +191,19 @@ const controleur2 = new IntersectionObserver((entries) => {                     
 });
 // 2- L'element a surveiller
 let chiffres2 = document.querySelector("#entreprises");
-if(chiffres2) controleur2.observe(chiffres2);                                        // if, permet de verifier d'abord avant d'observer   
-
+if(chiffres2) {                                                             // if, permet de verifier d'abord avant d'observer
+    controleur2.observe(chiffres2);                                           
+};
 
 
 //======= Sections qui apparaissent en fondu (fade-in) ========
     // creation de variable qui va observer les elements
-const monObservateur = new IntersectionObserver((entries) =>{                           // entries, liste des elements a surveille
-    entries.forEach((entry) => {                                                        // forEach, examine chaque element 1 par 1
+const monObservateur = new IntersectionObserver((entrer) =>{                           // entrer, liste des elements a surveille
+    entrer.forEach((entre) => {                                                        // forEach, examine chaque element 1 par 1
 
         // On verifie si l'element est visible
-        if (entry.isIntersecting) {                                                     
-            entry.target.classList.add("sectionFade-in");                               // Creation de classe CSS
+        if (entre.isIntersecting) {                                                     
+            entre.target.classList.add("sectionFade-in");                               // Creation de classe CSS
         }
     });
 });
@@ -213,7 +219,7 @@ mesSection.forEach((section) => {                                               
 const filtre = document.querySelector("#filtre");
 const cartes = document.querySelectorAll(".card");
 
-if (filtre) {            // if, permet de verifier d'abord avant de verifier
+if (filtre) {            // if, permet de verifier d'abord avant d'executer
     filtre.addEventListener("change", () => {                                               // On ecoute si l'utilisateur change de categorie
         let choix = filtre.value;                                                           // Pour recuperer la valeur choisie
         cartes.forEach((carte) => {                                                         // forEach, examine chaque element 1 par 1
@@ -261,7 +267,8 @@ if (form) {                     // if, permet de verifier d'abord avant d'execut
         }
 
         // Validation de l'email
-        if (!mail.value.includes('@')) {           // .include, permet de verifier si l’utilisateur n’a pas mis @ dans son email
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!regex.test(mail.value)) {                  //.test(), permet de verifier si la valeur du champ est respecte
             document.getElementById('mailErreur').textContent = 'Email invalide.';
             valid = false;
         }
@@ -286,4 +293,4 @@ if (form) {                     // if, permet de verifier d'abord avant d'execut
             // form.reset();         // permet de vider les champ du formulaire
         }
     });
-}
+};

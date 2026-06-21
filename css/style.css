@@ -55,14 +55,14 @@ header{
 
 /* Navbar */
 nav{
-    background-color: transparent;    
+    background-color: var(--couleur-fond);
 }
 /* Navbar sous dark mode */
 .dark-mode nav .navbar-toggler-icon{
     background-color: var(--bs-green);          /* Style Bouton du Menu hamburger */
 }
 .dark-mode nav{
-    background-color: transparent;        
+    background-color: var(--couleur-fond);        
 }
 .dark-mode nav a{
     color: var(--couleur-titre);            /*=== Couleur police navbar sous dark mode*/
@@ -70,7 +70,7 @@ nav{
 
 nav .container{
     padding-right: 15em;
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 nav .btn{
     border-radius: 50px;
@@ -94,7 +94,8 @@ nav img{
 }
 /* Bouton dark-mode */
 #dark-mode{
-    margin-left: 5rem;
+    position: fixed;
+    right: 5em;
     padding: 0.3rem 0.5rem;
     border-radius: 10px;
     color: var(--couleur-titre);
@@ -255,6 +256,7 @@ nav img{
     color: var(--couleur-fond);
     transform: translateY(0);
     transition: transform 1s ease;
+    cursor: pointer;
 }
 #btn-Top:hover{
     transform: translateY(-10px);
@@ -265,7 +267,7 @@ nav img{
 #freelance select{
     margin: 5rem 0 0 5rem;
 }
-#freelance .container .py-5{
+#freelance .container .pb-5{
     padding: 0 23em;
 }
 #freelance .container .card img{
@@ -482,8 +484,8 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
         font-size: 1rem;
     }
     #dark-mode{
-        margin-left: 20rem;
-        margin-top: -2rem;
+        /* margin-left: 20rem; */
+        margin-top: 2rem;
     }
 
     /* Section hero */
@@ -498,6 +500,9 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
         padding: 0.5rem 2.3rem;
         margin-bottom: 0.5rem;
     }
+    .cpt{
+        text-align: center;
+    }
     #hero-img{
         margin-top: -2rem;
     }
@@ -505,6 +510,7 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
     /* Section Comment ca marche */
     #comment{
         margin-top: 20rem;
+        padding: 0 1rem;
     }
     #comment .container .mb-5{
         font-size: 1rem;
@@ -526,6 +532,9 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
     }
 
     /* Section Categorie de services */
+    #service{
+        padding: 0 1rem;
+    }
     #service .container .mb-5{
         font-size: 1rem;
         padding: 0;
@@ -555,6 +564,9 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
 
 /* --- TABLETTE : ecrans compris entre 768px et 1023px --- */
 @media (min-width: 768px) and (max-width: 1023px) {
+    .cpt{
+        text-align: center;
+    }
     /* Section Comment ca marche */
     .comment{
         margin-top: 25rem;
@@ -618,9 +630,12 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
         padding: 0 2rem;
         font-size: 1rem;
     }
-    #freelance .container .py-5{
+    #freelance{
+        padding: 0 1rem;
+    }
+    #freelance .container .pb-5{
         padding: 0;
-        margin-top: 10rem;
+        margin-top: 5rem;
     }
 }
 
@@ -630,17 +645,17 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
         width: 8rem;
         margin-left: 2rem;
     }
-    #freelance .container .py-5{
+    #freelance .container .pb-5{
         padding: 0;
-        margin-top: 25rem;
+        margin-top: 5rem;
     }
 }
 
 /* --- ORDINATEUR : ecrans de 1200px et plus --- */
 @media (min-width: 1200px) {
-     #freelance .container .py-5{
-        margin-top: 5rem;
-    }
+     /* #freelance .container .pb-5{
+        margin-top: rem;
+    } */
 }
 
     /* ======== Page 3 : Tarif ========= */
@@ -654,21 +669,26 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
 
     /* Section Tarif */
     #tarif .container h2{
-        margin-top: 10rem;
+        margin-top: 5rem;
     }
     #tarif .container .badge{
-        margin-left: 0;
+        margin-left: 15rem;
     }
     #tarif{
         margin-bottom: 35rem;
+        padding: 0 1rem;
     }
     #tarif .row{
-        gap: 2rem;
+        gap: 3rem;
     }
 
     /* Section Accordion */
+    #accordion{
+        padding: 0 1rem;
+    }
     #FAQ{
-        padding-top: 10rem;
+        padding-top: 5rem;
+
     }
 }
 
@@ -676,16 +696,16 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
 @media (min-width: 768px) and (max-width: 1023px) {
     /* Section Tarif */
     #tarif .container h2{
-        margin-top: 10rem;
+        margin-top: 5rem;
     }
     #tarif .container .badge{
         margin-left: 15rem;
     }
     #tarif{
-        margin-bottom: 35rem;
+        margin-bottom: 10rem;
     }
-    #tarif .row{
-        gap: 2rem;
+    #entreprise{
+        margin-top: 3rem;
     }
 }
 
@@ -705,6 +725,12 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
         font-size: 1rem;
     }
     /* Section Notre histoire */
+    #histoire h2{
+        text-align: center;
+    }
+    #histoire{
+        padding: 0 1.9rem;
+    }
     #histoire .notre-histoire{
         display: flex;
         flex-wrap: wrap;
@@ -713,6 +739,7 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
     }
     #histoire .notre-histoire img{
         width: 100%;
+        padding-top: 2rem;
     }
     #histoire .notre-histoire p{
         font-size: 1rem;
@@ -720,7 +747,6 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
     /* Section L'équipe */
     #equipe .container p{
         margin: 0;
-        text-align: center;
     }
     #equipe .row{
         padding: 0 1rem;
@@ -747,10 +773,12 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
     }
     #equipe .container p{
         margin: 0;
-        text-align: center;
     }
     #equipe .row{
         padding: 0 1rem;
+    }
+    #jean{
+        margin-top: 1rem;
     }
     #equipe .row .card{
         margin-bottom: 1rem;
@@ -775,6 +803,9 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
         padding: 0 2rem;
         font-size: 1rem;
     }
+    #contact{
+        padding: 0 1rem;
+    }
     #contact h2{
         padding-top: 5rem;
     }
@@ -791,10 +822,10 @@ MEDIA QUERIES — Adaptations selon la taille de l'ecran
     #contact h2{
         padding-top: 5rem;
     }
-    #test-form{
+    #id-form{
         width: 100%;
     }
-    #testadd{
+    #id-add{
         width: 100%;            /*==== pour gerer la taille du colonne adresse ====*/
     }
     #contact iframe{
